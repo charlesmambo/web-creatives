@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  color: #1c1c1c;
+  color: #1e1e1e;
 }
 
 :root {
@@ -22,17 +22,30 @@
   -moz-osx-font-smoothing: grayscale;
 
   --column-gap: 1.5rem;
+  --md-column-gap: 2.8rem;
+  --lg-column-gap: 3.8rem;
   --xl-column-gap: 4.5rem;
   --orange-color: #F15A24;
   --dark-orange-color: #d14d1d;
   --white-color: #FFFFFF;
   --link-color: #1c1c1c;
+  --grey-color: #00000099;
+  --light-grey-color: #D9D9D9;
+  --border-color: #00000066;
 
-  --sm-navbar-padding: 1.8rem 5rem;
+  --sm-navbar-padding: 1.8rem 9rem;
+  --container-padding: 2rem 9rem;
+
+  --xl-fontsize: 2.6rem;
+  --lg-fontsize: 2rem;
+  --sm-fontsize: 0.8rem;
 
   --btn-fontsize: 0.9rem;
   --btn-fontweight: 500;
   --btn-padding: 0.5rem 1rem;
+
+  --sm-margin-top: 0.5rem;
+  --margin-top: 1rem;
 }
 
 
@@ -41,5 +54,20 @@ body {
 }
 
 section {
-  padding: var(--sm-navbar-padding);
+  padding: var(--container-padding);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--link-color);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--lg-fontsize);
+}
+
+h3 {
+  font-size: 1rem;
 }

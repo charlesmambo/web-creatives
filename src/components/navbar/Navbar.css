@@ -18,6 +18,8 @@ nav {
     color: var(--link-color);
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 0.92rem;
+    font-weight: 500;
 }
 
 .navbar_links li a::after {
