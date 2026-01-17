@@ -21,7 +21,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --column-gap: 1.5rem;
+  --column-gap: 1.3rem;
   --md-column-gap: 2.8rem;
   --lg-column-gap: 3.8rem;
   --xl-column-gap: 4.5rem;
@@ -39,6 +39,7 @@
   --xl-fontsize: 2.6rem;
   --lg-fontsize: 2rem;
   --sm-fontsize: 0.8rem;
+  --md-fontsize: 1rem;
 
   --btn-fontsize: 0.9rem;
   --btn-fontweight: 500;
