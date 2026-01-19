@@ -1,0 +1,120 @@
+.contact-wrapper {
+    padding: var(--container-padding);
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--md-column-gap)
+}
+
+.contact-content h2 {
+    line-height: 40px;
+}
+
+.contact-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-content ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--grey-color);
+}
+
+.contact-content ul li img {
+    width: 30px;
+}
+
+.ctc-img {
+    width: 400px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+}
+
+form {
+    width: 28vw;
+}
+
+.form-control input {
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+    width: 100%;
+    outline: none;
+    color: var(--link-color);
+}
+
+.ctc-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--column-gap);
+    margin-bottom: 1.5rem;
+}
+
+.interests-wrapper {
+    margin-top: 1rem;
+}
+
+.interests p {
+    border: 2px solid var(--border-color);
+    font-size: var(--sm-fontsize);
+    width: 130px;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.interests {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.ng {
+    border: 2px solid var(--orange-color) !important;
+    background-color: var(--orange-color);
+    color: var(--white-color);
+}
+
+.textarea-wrapper {
+    margin-top: 1.5rem;
+}
+
+textarea {
+    margin-top: 1rem;
+    border: 2px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    height: 150px;
+    margin-bottom: 2rem;
+    width: 100%;
+    color: var(--grey-color);
+    font-weight: 500;
+    resize: none;
+    outline: none;
+}
+
+.ctc-btn {
+    background-color: var(--link-color) !important;
+    color: var(--white-color);
+    padding: 0.8rem;
+    border: none;
+    width: 130px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
