@@ -1,0 +1,137 @@
+.about-wrapper {
+    margin-top: 4rem;
+    padding: var(--container-padding);
+}
+
+.abt-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+.abt-img-container {
+    min-width: 430px;
+}
+
+.abt-img-container img {
+    width: 100%;
+}
+
+.abt-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.abt-hero-content p {
+    color: var(--grey-color);
+}
+
+.vm-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vm-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.vm-card h3 {
+    color: var(--orange-color);
+    font-size: 1.4rem;
+}
+
+.vm-card p {
+    color: var(--grey-color);
+    margin-top: 0.4rem;
+}
+
+.vm-img-container {
+    min-width: 500px;
+}
+
+.how-we-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-we-work h2 {
+    color: var(--orange-color);
+}
+
+.ack-text {
+    color: var(--link-color) !important;
+}
+
+.work-cards-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    width: 55vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--column-gap);
+}
+
+.works-card {
+    width: 260px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    min-height: 166px;
+}
+
+.works-card {
+    font-weight: 600;
+}
+
+.works-card h4,
+p {
+    color: var(--white-color) !important;
+}
+
+.works-card p {
+    font-size: var(--sml-fontsize);
+    font-weight: 400;
+}
+
+.black-card {
+    background-color: var(--link-color);
+    color: var(--white-color) !important;
+}
+
+.black-card p {
+    background-color: var(--link-color);
+    color: var(--white-color) !important;
+}
+
+.black-card h4 {
+    background-color: var(--link-color);
+    color: var(--white-color) !important;
+    font-weight: 600;
+}
+
+.orange-card {
+    background-color: var(--orange-color);
+}
+
+.grey-card {
+    background-color: var(--grey-color);
+}
+
+.grey-card h4,
+p {
+    color: var(--link-color);
+}
+
+
+.green-card {
+    background-color: var(--green-color);
+}
