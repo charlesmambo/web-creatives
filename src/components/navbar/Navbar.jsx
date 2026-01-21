@@ -7,7 +7,9 @@ import PrimaryBtn from '../btn/primaryBtn';
 const Navbar = () => {
   return (
     <nav>
+      <Link to="/">
       <img src={LOGO} alt="web creatives" className="logo" />
+      </Link>
 
       <ul className="navbar_links">
         <li>

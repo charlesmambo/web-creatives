@@ -24,8 +24,8 @@
     gap: 1.2rem;
 }
 
-.abt-hero-content p {
-    color: var(--grey-color);
+.abt-paragraph {
+    color: var(--grey-color) !important;
 }
 
 .vm-wrapper {
@@ -45,8 +45,8 @@
     font-size: 1.4rem;
 }
 
-.vm-card p {
-    color: var(--grey-color);
+.vm-paragraph-text {
+    color: var(--grey-color) !important;
     margin-top: 0.4rem;
 }
 
@@ -85,15 +85,15 @@
     flex-direction: column;
     gap: 0.5rem;
     border-radius: 0.5rem;
-    min-height: 166px;
+    min-height: 150px;
+    justify-content: center;
 }
 
 .works-card {
     font-weight: 600;
 }
 
-.works-card h4,
-p {
+.works-card h4 {
     color: var(--white-color) !important;
 }
 
@@ -122,16 +122,27 @@ p {
     background-color: var(--orange-color);
 }
 
+.orange-card p {
+    color: var(--white-color) !important;
+}
+
 .grey-card {
     background-color: var(--grey-color);
 }
 
-.grey-card h4,
-p {
-    color: var(--link-color);
+.grey-card h4 {
+    color: var(--link-color) !important;
+}
+
+.grey-card p {
+    color: var(--link-color) !important;
 }
 
 
 .green-card {
     background-color: var(--green-color);
+}
+
+.green-card p {
+    color: var(--white-color) !important;
 }
