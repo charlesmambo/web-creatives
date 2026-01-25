@@ -32,7 +32,7 @@
 }
 
 .ctc-img {
-    width: 400px;
+    width: 500px;
 }
 
 .form-control {
@@ -43,7 +43,7 @@
 }
 
 form {
-    width: 28vw;
+    width: 35vw;
 }
 
 .form-control input {
@@ -65,16 +65,17 @@ form {
 }
 
 .interests-wrapper {
-    margin-top: 1rem;
+    margin-top: 1.1rem;
 }
 
 .interests p {
     border: 2px solid var(--border-color);
     font-size: var(--sm-fontsize);
-    width: 130px;
+    width: 150px;
     text-align: center;
     padding: 0.5rem;
     border-radius: 0.4rem;
+    cursor: pointer;
 }
 
 .interests {
@@ -98,7 +99,7 @@ form {
 textarea {
     margin-top: 1rem;
     border: 2px solid var(--border-color);
-    padding: 0.5rem;
+    padding: 0.9rem;
     border-radius: 0.4rem;
     height: 150px;
     margin-bottom: 2rem;
@@ -114,7 +115,9 @@ textarea {
     color: var(--white-color);
     padding: 0.8rem;
     border: none;
-    width: 130px;
+    width: 150px;
     border-radius: 0.4rem;
     cursor: pointer;
+    font-weight: 500;
+    margin-top: -1rem;
 }

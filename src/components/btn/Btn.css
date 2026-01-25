@@ -31,7 +31,7 @@
     font-weight: var(--btn-fontweight);
     color: var(--orange-color);
     border-radius: 2rem;
-    padding: var(--btn-padding);
+    padding: var(--outline-btn-padding);
     cursor: pointer;
     transition: background-color 0.6s ease,
         color 0.6s ease,

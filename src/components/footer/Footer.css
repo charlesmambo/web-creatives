@@ -28,6 +28,13 @@ footer {
     color: var(--white-color);
     font-weight: 300;
     font-size: var(--sml-fontsize);
+    transition: all 0.6s ease;
+
+}
+
+.footer-links ul li a:hover {
+    color: var(--orange-color);
+    font-weight: 400;
 }
 
 .footer-links p {

@@ -22,7 +22,7 @@ const Home = () => {
         <p>We create branding, web, and UI/UX solutions designed to deliver measurable impact.</p>
 
         <div className="header-btn">
-            <OutlineBtn text="Request a quote" className='outline'/>
+            <OutlineBtn text="Request a quote"/>
             <img src={ARROW} alt="down arrow" />
         </div>
         <div className="bottom-imgs">
@@ -32,7 +32,7 @@ const Home = () => {
       </header>
 
       <main>
-        <h2>Modern Solutions To Drive Growth, Built On A Foundation Of Partnership With Your Vision.</h2>
+        <h2 className='main-title'>Modern Solutions To Drive Growth, Built On A Foundation Of Partnership With Your Vision.</h2>
 
         <div className="main-content">
             <div className="main-content-img">

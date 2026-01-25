@@ -5,17 +5,20 @@
 
 .abt-hero {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 6rem;
 }
 
 .abt-img-container {
-    min-width: 430px;
+    min-width: 440px;
 }
 
 .abt-img-container img {
     width: 100%;
+}
+
+.abt-hero-content h2 {
+    color: var(--orange-color);
 }
 
 .abt-hero-content {
@@ -40,9 +43,8 @@
     gap: 1.2rem;
 }
 
-.vm-card h3 {
+.vm-card h2 {
     color: var(--orange-color);
-    font-size: 1.4rem;
 }
 
 .vm-paragraph-text {
@@ -51,7 +53,7 @@
 }
 
 .vm-img-container {
-    min-width: 500px;
+    min-width: 600px;
 }
 
 .how-we-work {
@@ -62,31 +64,34 @@
 
 .how-we-work h2 {
     color: var(--orange-color);
+    margin-bottom: 0.3rem;
 }
 
 .ack-text {
     color: var(--link-color) !important;
+    margin-bottom: 2rem;
 }
 
 .work-cards-wrapper {
     margin-top: 2rem;
     display: flex;
     align-items: center;
-    width: 55vw;
+    width: 58vw;
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--column-gap);
 }
 
 .works-card {
-    width: 260px;
+    width: 280px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     border-radius: 0.5rem;
-    min-height: 150px;
+    min-height: 180px;
     justify-content: center;
+    align-items: center;
 }
 
 .works-card {
@@ -95,10 +100,12 @@
 
 .works-card h4 {
     color: var(--white-color) !important;
+    font-weight: 500;
+    width: 100%;
 }
 
 .works-card p {
-    font-size: var(--sml-fontsize);
+    font-size: var(--smlx-fontsize);
     font-weight: 400;
 }
 
@@ -115,7 +122,6 @@
 .black-card h4 {
     background-color: var(--link-color);
     color: var(--white-color) !important;
-    font-weight: 600;
 }
 
 .orange-card {
@@ -145,4 +151,8 @@
 
 .green-card p {
     color: var(--white-color) !important;
+}
+
+.abt-faq {
+    margin: 5rem 0;
 }

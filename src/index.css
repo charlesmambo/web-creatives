@@ -34,18 +34,20 @@
   --border-color: #24242466;
   --green-color: #0D4E41;
 
-  --sm-navbar-padding: 1.8rem 9rem;
-  --container-padding: 2rem 9rem;
+  --sm-navbar-padding: 1.8rem 7rem;
+  --container-padding: 2rem 7rem;
 
   --xl-fontsize: 2.6rem;
   --lg-fontsize: 2rem;
   --sm-fontsize: 0.8rem;
   --sml-fontsize: 0.9rem;
+  --smlx-fontsize: 0.96rem;
   --md-fontsize: 1rem;
 
   --btn-fontsize: 0.9rem;
   --btn-fontweight: 500;
-  --btn-padding: 0.5rem 1rem;
+  --btn-padding: 0.6rem 1rem;
+  --outline-btn-padding: 0.8rem 1rem;
 
   --sm-margin-top: 0.5rem;
   --margin-top: 1rem;

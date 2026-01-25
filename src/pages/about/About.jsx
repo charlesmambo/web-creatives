@@ -24,11 +24,11 @@ const About = () => {
         <div className="vm-wrapper">
             <div className="vm-content">
                 <div className="vm-card">
-                    <h3>Vision</h3>
+                    <h2>Vision</h2>
                     <p className='abt-paragraph vm-paragraph-text'>Our vision is to be a leading creative partner recognized for excellence and innovation, empowering businesses to thrive in a digital-first world.</p>
                 </div>
                 <div className="vm-card">
-                    <h3>Mission</h3>
+                    <h2>Mission</h2>
                     <p className='abt-paragraph vm-paragraph-text'>At Webb Creatives, our mission is to bridge the gap between creativity and technology, delivering innovative solutions that drive growth and success through collaboration.</p>
                 </div>
             </div>

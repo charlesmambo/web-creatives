@@ -30,15 +30,15 @@ header p {
 }
 
 .header-btn img {
-    width: 40px;
+    width: 55px;
     margin-top: 3rem;
 }
 
 .left-img {
     position: absolute;
-    left: -10rem;
+    left: -9rem;
     top: 3rem;
-    width: 100px;
+    width: 130px;
 }
 
 .bottom-imgs {
@@ -46,7 +46,7 @@ header p {
     justify-content: space-between;
     width: 95%;
     position: absolute;
-    top: 13rem;
+    top: 14rem;
 }
 
 .bottom-imgs img {
@@ -54,16 +54,25 @@ header p {
 }
 
 .bottom-left-img {
-    transform: rotate(30deg);
+    transform: rotate(10deg);
+    width: 26vw !important;
+    position: relative;
+    left: -2rem;
 }
 
 .bottom-right-img {
     position: relative;
-    bottom: -2rem;
+    top: -1rem;
+    right: -3rem;
+    width: 27vw !important;
 }
 
 main {
-    margin-top: 14rem;
+    margin-top: 15rem;
+}
+
+.main-title {
+    font-size: 1.8rem;
 }
 
 .main-content-circle-container {
@@ -73,7 +82,7 @@ main {
 }
 
 .main-content-img img {
-    width: 28vw;
+    width: 31vw;
 }
 
 .main-content {
@@ -91,15 +100,17 @@ main {
 .main-content-text p {
     color: var(--grey-color);
     font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    padding-right: 2rem;
 }
 
 .circle {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--sm-fontsize);
+    font-size: var(--sml-fontsize);
     border-radius: 50%;
     color: var(--white-color);
     text-align: center;
@@ -175,7 +186,7 @@ main {
 
 .strategy-card {
     border: 2px solid var(--border-color);
-    width: 24rem;
+    width: 36rem;
     border-radius: 0.8rem;
     padding: 1rem;
     display: flex;
@@ -188,13 +199,13 @@ main {
 }
 
 .strategy-card p {
-    font-size: var(--sm-fontsize);
+    font-size: var(--sml-fontsize);
     color: var(--grey-color);
     margin-top: -0.1rem;
 }
 
 .our-services {
-    margin-top: 4rem;
+    margin-top: 5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -207,21 +218,20 @@ main {
 }
 
 .our-services h4 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
 .our-services-wrapper {
     display: flex;
     flex-direction: column;
-    width: 26rem;
     gap: 1rem;
 }
 
 .our-services-card {
     display: flex;
     flex-direction: column;
-    width: 26rem;
+    width: 36rem;
     gap: 0.5rem;
 }
 
@@ -249,6 +259,10 @@ main {
     width: 8px;
     height: 8px;
     border-radius: 2rem;
+}
+
+.faq {
+    margin: 5rem 0;
 }
 
 .faq-container h3 {
@@ -301,7 +315,7 @@ main {
 .faq-view-card-title h4 {
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .faq-view-icon-container {
