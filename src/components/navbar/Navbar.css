@@ -4,6 +4,7 @@ nav {
     justify-content: space-between;
     gap: var(--column-gap);
     padding: var(--sm-navbar-padding);
+    position: relative;
 }
 
 .navbar_links {
@@ -44,4 +45,58 @@ nav {
 
 .logo {
     width: 180px;
+}
+
+.hamburger-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--link-color);
+}
+
+.hamburger {
+    display: none;
+}
+
+.mobile-navbar_links {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92vw;
+    background-color: #fcf2ee;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    gap: 1.4rem;
+}
+
+.close-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 0.9rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar_links:not(.mobile-navbar_links) {
+        display: none;
+    }
+
+    .contact-btn {
+        display: none;
+    }
+
+    nav {
+        padding: var(--sm-mobile-navbar-padding);
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    }
 }
