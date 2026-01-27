@@ -21,10 +21,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --sm-column-gap: 1rem;
   --column-gap: 1.3rem;
   --md-column-gap: 2.8rem;
   --lg-column-gap: 3.8rem;
   --xl-column-gap: 4.5rem;
+  --xxl-column-gap: 5.5rem;
   --orange-color: #F15A24;
   --dark-orange-color: #d14d1d;
   --white-color: #FFFFFF;
@@ -38,18 +40,22 @@
   --sm-navbar-padding: 1.8rem 7rem;
   --sm-mobile-navbar-padding: 1.7rem 1.6rem;
   --container-padding: 2rem 7rem;
+  --mobile-container-padding: 2rem 1.6rem;
 
   --xl-fontsize: 2.6rem;
   --lg-fontsize: 2rem;
+  --lgx-fontsize: 2.4rem;
   --sm-fontsize: 0.8rem;
   --sml-fontsize: 0.9rem;
   --smlx-fontsize: 0.96rem;
   --md-fontsize: 1rem;
 
   --btn-fontsize: 0.9rem;
+  --mobile-btn-fontsize: 1rem;
   --btn-fontweight: 500;
   --btn-padding: 0.6rem 1rem;
   --outline-btn-padding: 0.8rem 1rem;
+  --mobile-outline-btn-padding: 0.9rem 1.1rem;
 
   --sm-margin-top: 0.5rem;
   --margin-top: 1rem;
@@ -77,4 +83,10 @@ h2 {
 
 h3 {
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    padding: var(--mobile-container-padding);
+  }
 }
