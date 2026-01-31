@@ -1,4 +1,5 @@
 import React from 'react';
+import '../faq/Faq.css';
 import { FaCircle } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
 import { useState } from "react";

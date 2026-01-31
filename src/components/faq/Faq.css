@@ -1,0 +1,23 @@
+@media only screen and (max-width: 600px) {
+    .faq-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4rem;
+        flex-direction: column;
+    }
+
+    .faq-view {
+        display: flex;
+        align-items: center;
+        gap: var(--column-gap);
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .faq-view-card {
+        border: 2px solid var(--border-color);
+        width: 88vw;
+        border-radius: 0.8rem;
+        padding: 1.1rem;
+    }
+}

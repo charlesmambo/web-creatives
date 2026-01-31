@@ -499,4 +499,27 @@ main {
     .main-content-img img {
         width: 68vw;
     }
+
+    .strategy-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .our-services {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .our-services-card {
+        display: flex;
+        flex-direction: column;
+        width: 82vw;
+        gap: 0.5rem;
+    }
+
 }
