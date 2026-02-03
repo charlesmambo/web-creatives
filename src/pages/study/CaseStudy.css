@@ -1,9 +1,15 @@
 .study-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 75vh;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .study-wrapper {
+    min-height: 70vh;
+  }
 }
