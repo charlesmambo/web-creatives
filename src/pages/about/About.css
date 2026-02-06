@@ -73,17 +73,17 @@
 }
 
 .work-cards-wrapper {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: flex;
   align-items: center;
-  width: 58vw;
+  width: 68vw;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--column-gap);
 }
 
 .works-card {
-  width: 280px;
+  width: 320px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -133,7 +133,7 @@
 }
 
 .grey-card {
-  background-color: var(--grey-color);
+  background-color: rgb(170, 170, 170);
 }
 
 .grey-card h4 {
@@ -158,7 +158,7 @@
 
 @media only screen and (max-width: 600px) {
   .about-wrapper {
-    margin-top: 4rem;
+    margin-top: 2rem;
     padding: var(--mobile-container-padding);
   }
   .abt-hero {
@@ -194,5 +194,15 @@
   }
   .abt-hero-content {
     margin-top: -1.1rem;
+  }
+}
+
+@media (min-width: 1550px) {
+  .about-wrapper {
+    margin-top: 4rem;
+    padding: var(--desktop-container-padding);
+  }
+  .works-card {
+    width: 360px;
   }
 }

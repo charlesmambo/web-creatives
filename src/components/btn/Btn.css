@@ -1,52 +1,49 @@
 .primary-btn {
-    border: none;
-    padding: var(--btn-padding);
-    text-transform: capitalize;
-    font-weight: var(--btn-fontweight);
-    font-size: var(--btn-fontsize);
-    letter-spacing: 1px;
-    background-color: var(--orange-color);
-    color: var(--white-color);
-    font-family: inherit;
-    border-radius: 2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.6s ease,
-        transform 0.6s ease,
-        box-shadow 0.6s ease;
+  border: none;
+  padding: var(--btn-padding);
+  text-transform: capitalize;
+  font-weight: var(--btn-fontweight);
+  font-size: var(--btn-fontsize);
+  letter-spacing: 1px;
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  font-family: inherit;
+  border-radius: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .primary-btn:hover {
-    background-color: var(--dark-orange-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background-color: var(--dark-orange-color);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .outline {
-    border: 2px solid var(--orange-color);
-    background-color: transparent;
-    font-size: var(--btn-fontsize);
-    font-weight: var(--btn-fontweight);
-    color: var(--orange-color);
-    border-radius: 2rem;
-    padding: var(--outline-btn-padding);
-    cursor: pointer;
-    transition: background-color 0.6s ease,
-        color 0.6s ease,
-        border-color 0.6s ease;
+  border: 2px solid var(--orange-color);
+  background-color: transparent;
+  font-size: var(--btn-fontsize);
+  font-weight: var(--btn-fontweight);
+  color: var(--orange-color);
+  border-radius: 2rem;
+  padding: var(--outline-btn-padding);
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .outline:hover {
-    background-color: var(--orange-color);
-    color: var(--white-color);
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  transform: translateY(-4px) scale(1.05);
 }
 
 @media only screen and (max-width: 600px) {
-    .outline {
-        padding: var(--mobile-outline-btn-padding);
-        font-weight: 600;
-        font-size: var(--mobile-btn-fontsize);
-    }
+  .outline {
+    padding: var(--mobile-outline-btn-padding);
+    font-weight: 600;
+    font-size: var(--mobile-btn-fontsize);
+  }
 }
