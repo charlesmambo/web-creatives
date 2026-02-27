@@ -3,8 +3,8 @@ import "../contact/Contact.css";
 import EMAIL from "../../assets/email.svg";
 import PHONE from "../../assets/phone.svg";
 import CTC from "../../assets/ctc.svg";
-import { CgTouchpad } from "react-icons/cg";
-import PrimaryBtn from "../../components/btn/primaryBtn";
+// import { CgTouchpad } from "react-icons/cg";
+// import PrimaryBtn from "../../components/btn/primaryBtn";
 
 const Contact = () => {
   return (
