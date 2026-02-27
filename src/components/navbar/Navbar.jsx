@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../navbar/Navbar.css";
 import LOGO from "../../assets/logo.svg";
-import PrimaryBtn from "../btn/primaryBtn";
+import PrimaryBtn from "../btn/PrimaryBtn";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { NavLink } from "react-router-dom";
@@ -27,6 +27,9 @@ const Navbar = () => {
       <ul className="navbar_links">
         <li>
           <Link to="/">home</Link>
+        </li>
+        <li>
+          <Link to="/pricings">pricings</Link>
         </li>
         <li>
           <Link to="/about">about</Link>
@@ -60,6 +63,15 @@ const Navbar = () => {
             </NavLink>
           </li>
 
+          <li>
+            <NavLink
+              to="/pricings"
+              onClick={closeMobileMenu}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Pricing
+            </NavLink>
+          </li>
           <li>
             <NavLink
               to="/about"
