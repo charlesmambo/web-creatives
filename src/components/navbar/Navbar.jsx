@@ -63,7 +63,7 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          <li>
+          {/* <li>
             <NavLink
               to="/pricings"
               onClick={closeMobileMenu}
@@ -71,7 +71,7 @@ const Navbar = () => {
             >
               Pricing
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               to="/about"
