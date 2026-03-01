@@ -144,7 +144,7 @@ textarea {
   .interests p {
     border: 2px solid var(--border-color);
     font-size: var(--sm-fontsize);
-    width: 170px;
+    width: 140px;
   }
 
   .interests {
