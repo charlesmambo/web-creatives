@@ -2,6 +2,7 @@
     padding: var(--container-padding);
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .contact-content {
@@ -120,4 +121,31 @@ textarea {
     cursor: pointer;
     font-weight: 500;
     margin-top: -1rem;
+}
+.interests p{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.interests p.active{
+    background: #F15A24;
+    color: white;
+    border-color: #F15A24;
+}
+.error-message{
+    color: var(--red-color);
+}
+.success-message,
+.error-message{
+    width: fit-content;
+    padding: 1.3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.2rem;
+    position: absolute;
+    top: 40%;
+    z-index: 100;
+    background-color: #fff;
+}
+.success-message{
+    color: var(--green-color);
 }
