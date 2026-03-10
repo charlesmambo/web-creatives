@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import '../contact/Contact.css';
 import EMAIL from '../../assets/email.svg';
 import PHONE from '../../assets/phone.svg';
@@ -44,88 +43,61 @@ const Contact = () => {
     return regex.test(email);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setStatus({
-      loading: false,
-      success: "",
-      error: ""
-    });
-
     if (!formData.name.trim()) {
-      setStatus({
-        loading: false,
-        success: "",
-        error: "Please enter your name."
-      });
+      setStatus({ error: "Please enter your name." });
       return;
     }
 
     if (!formData.company.trim()) {
-      setStatus({
-        loading: false,
-        success: "",
-        error: "Please enter your company name."
-      });
+      setStatus({ error: "Please enter your company name." });
       return;
     }
 
     if (!validateEmail(formData.email)) {
-      setStatus({
-        loading: false,
-        success: "",
-        error: "Please enter a valid email address."
-      });
+      setStatus({ error: "Please enter a valid email address." });
       return;
     }
 
     if (!activeInterest) {
-      setStatus({
-        loading: false,
-        success: "",
-        error: "Please select the service you are interested in."
-      });
+      setStatus({ error: "Please select the service you are interested in." });
       return;
     }
 
     if (!formData.message.trim()) {
-      setStatus({
-        loading: false,
-        success: "",
-        error: "Please enter a message."
-      });
+      setStatus({ error: "Please enter a message." });
       return;
     }
 
-    const templateParams = {
-      name: formData.name,
-      company: formData.company,
-      email: formData.email,
-      phone: formData.phone,
-      interest: activeInterest,
-      message: formData.message
-    };
+    setStatus({ loading: true });
 
-    setStatus({
-      loading: true,
-      success: "",
-      error: ""
-    });
+    try {
+      const API_URL = import.meta.env.VITE_API_URL;
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          ...formData,
+          interest: activeInterest
+        })
+      });
 
-    emailjs.send(
-      "service_gy5llvw",
-      "template_gecigb6",
-      templateParams,
-      "yWbXpRL_G_UiXZlYZ"
-    )
-    .then(() => {
+      if (!response.ok) {
+        throw new Error("Email failed");
+      }
 
       setStatus({
         loading: false,
-        success: "Your message has been sent successfully!",
-        error: ""
+        success: "Your message has been sent successfully!"
       });
+
+      setTimeout(() => {
+      setStatus(prev => ({ ...prev, success: "" }));
+       }, 3000);
 
       setFormData({
         name: "",
@@ -137,23 +109,16 @@ const Contact = () => {
 
       setActiveInterest(null);
 
-      setTimeout(() => {
-        setStatus({
-          loading: false,
-          success: "",
-          error: ""
-        });
-      }, 4000);
+    } catch (error) {
 
-    })
-    .catch(() => {
       setStatus({
         loading: false,
-        success: "",
         error: "Something went wrong. Please try again."
       });
-    });
+
+    }
   };
+
 
   return (
     <div className='contact-wrapper'>
