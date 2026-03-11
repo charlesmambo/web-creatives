@@ -167,7 +167,16 @@ border-color:#f15a24;
   width: 100%;
 }
 .ctc-img {
-  width: 480px;
+  width: 460px;
+  margin-left: -2rem;
+}
+ .interests p {
+  width: 40vw;
+}
+.interests {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
 }
 }
 @media (min-width: 1550px){
