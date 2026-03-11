@@ -178,6 +178,13 @@ border-color:#f15a24;
  align-items: center;
  justify-content: space-between;
 }
+.success-message,
+.error-message{
+position: absolute;
+top: 60%;
+width: 87%;
+text-align: center;
+}
 }
 @media (min-width: 1550px){
   .contact-wrapper{
