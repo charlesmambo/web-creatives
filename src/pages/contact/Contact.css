@@ -153,6 +153,23 @@ background:#f15a24;
 color:white;
 border-color:#f15a24;
 }
+@media only screen and (max-width: 600px){
+ .contact-wrapper{
+     padding: var(--mobile-container-padding);
+     display: flex;
+     flex-direction: column;
+  } 
+  form {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.ctc-btn{
+  width: 100%;
+}
+.ctc-img {
+  width: 480px;
+}
+}
 @media (min-width: 1550px){
   .contact-wrapper{
     padding: var(--desktop-navbar-padding);
