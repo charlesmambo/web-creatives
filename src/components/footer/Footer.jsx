@@ -14,19 +14,23 @@ const Footer = () => {
         <ul>
           <li>
             <Link to="/contact">
-              <a href="">Contact Us</a>
+              Contact Us
             </Link>
           </li>
           <li>
             <Link to="/about">
-              <a href="">About</a>
+              About
             </Link>
           </li>
           <li>
-            <a href="#">Privacy & Cookie Policy</a>
+          <Link to="#">
+            Privacy & Cookie Policy
+            </Link>
           </li>
           <li>
-            <a href="#">Terms & Conditions</a>
+          <Link to="#">
+            Terms & Conditions
+          </Link>
           </li>
         </ul>
         <p className="year">
