@@ -3,9 +3,12 @@ import '../contact/Contact.css';
 import EMAIL from '../../assets/email.svg';
 import PHONE from '../../assets/phone.svg';
 import CTC from '../../assets/ctc.svg';
+import { Forminit } from 'forminit';
+
+const forminit = new Forminit();
+const FORM_ID = 'u8a736h7fal'; 
 
 const Contact = () => {
-
   const [activeInterest, setActiveInterest] = useState(null);
 
   const [formData, setFormData] = useState({
@@ -43,81 +46,69 @@ const Contact = () => {
     return regex.test(email);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (!formData.name.trim()) {
-      setStatus({ error: "Please enter your name." });
-      return;
-    }
+  // ---- VALIDATIONS ----
+  if (!formData.name.trim()) {
+    setStatus({ loading: false, success: "", error: "Please enter your name." });
+    return;
+  }
 
-    if (!formData.company.trim()) {
-      setStatus({ error: "Please enter your company name." });
-      return;
-    }
+  if (!formData.company.trim()) {
+    setStatus({ loading: false, success: "", error: "Please enter your company name." });
+    return;
+  }
 
-    if (!validateEmail(formData.email)) {
-      setStatus({ error: "Please enter a valid email address." });
-      return;
-    }
+  if (!validateEmail(formData.email)) {
+    setStatus({ loading: false, success: "", error: "Please enter a valid email address." });
+    return;
+  }
 
-    if (!activeInterest) {
-      setStatus({ error: "Please select the service you are interested in." });
-      return;
-    }
+  if (!activeInterest) {
+    setStatus({ loading: false, success: "", error: "Please select the service you are interested in." });
+    return;
+  }
 
-    if (!formData.message.trim()) {
-      setStatus({ error: "Please enter a message." });
-      return;
-    }
+  if (!formData.message.trim()) {
+    setStatus({ loading: false, success: "", error: "Please enter a message." });
+    return;
+  }
 
-    setStatus({ loading: true });
+  setStatus({ loading: true, success: "", error: "" });
 
-    try {
-     const API_URL = import.meta.env.VITE_API_URL;
-      const response = await fetch(`${API_URL}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          ...formData,
-          interest: activeInterest
-        })
-      });
+  // ---- FORMNIT SUBMISSION ----
+  const formDataToSend = new FormData();
+  formDataToSend.append("fi-sender-fullName", formData.name);           // Full name
+  formDataToSend.append("fi-text-company", formData.company);           // Company
+  formDataToSend.append("fi-sender-email", formData.email);            // Email
+  formDataToSend.append("fi-text-phone", formData.phone);              // Phone
+  formDataToSend.append("fi-text-interest", activeInterest);           // Interest
+  formDataToSend.append("fi-text-message", formData.message);          // Message
 
-      if (!response.ok) {
-        throw new Error("Email failed");
+  try {
+    const { error } = await forminit.submit(FORM_ID, formDataToSend);
+
+    if (error) {
+      let cleanError = error.message || "Something went wrong. Please try again.";
+      if (/<[a-z][\s\S]*>/i.test(cleanError)) {
+        cleanError = "Your message could not be sent. Please try again.";
       }
 
-      setStatus({
-        loading: false,
-        success: "Your message has been sent successfully!"
-      });
-
-      setTimeout(() => {
-      setStatus(prev => ({ ...prev, success: "" }));
-       }, 3000);
-
-      setFormData({
-        name: "",
-        company: "",
-        email: "",
-        phone: "",
-        message: ""
-      });
-
-      setActiveInterest(null);
-
-    } catch (error) {
-
-      setStatus({
-        loading: false,
-        error: "Something went wrong. Please try again."
-      });
-
+      setStatus({ loading: false, success: "", error: cleanError });
+      return;
     }
-  };
+
+    setStatus({ loading: false, success: "Your message has been sent successfully!", error: "" });
+    setFormData({ name: "", company: "", email: "", phone: "", message: "" });
+    setActiveInterest(null);
+
+    setTimeout(() => setStatus(prev => ({ ...prev, success: "" })), 3000);
+
+  } catch (err) {
+    setStatus({ loading: false, success: "", error: "Something went wrong. Please try again." });
+  }
+};
 
 
   return (
